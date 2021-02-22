@@ -49,6 +49,33 @@
             需要暂存区有内容
             会形成一个历史版本
             git commit -m "说明"
+
+
+        6 查看历史版本
+            git  log
+                commit 历史版本id 唯一值
+
+        7 回滚历史版本
+            git reset --hard  版本id
+        注意 
+        回到了过去 在过去的基础上新增了历史版本  上传到远程 就回不去了
+        8 删除历史版本
+            git rebase -i 版本历史id
+
+
+        
+        git 上传远程
+        可以上传到GitHub 也可以上传到gitee
+
+        1 建立远程仓库 在GitHub上建立一个文件夹
+        2 在文件夹里面保证有一个没有上传的历史版本
+        3 添加一个远程仓库地址
+            git remote add origin 仓库地址
+            remote 远程
+            add 添加
+            origin 变量名  代表了远程仓库地址
+        4 把历史区的内容 推送到远程
+            git push -u origin master 
         */
     </script>
 </body>
