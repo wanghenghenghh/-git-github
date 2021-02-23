@@ -90,6 +90,76 @@
                     不需要再次克隆 
                     git pull
             2拉取别人的代码
+
+
+
+            历史回滚问题
+                先git pull 
+                会自动整合
+                再git push 
+                
+
+            .gitkeep
+                - 就是为了保留空文件夹使用的
+                - 只有后缀没有名字
+            .gitignore
+                - 表示在 git 管理的文件夹中忽略哪些东西
+                - 直接写在一个和 .git 同级的文件夹下
+
+
+            git 分支操作
+            开辟
+                git branch 要开辟分支的名字
+            查看当前分支情况
+                git branch 
+            切换分支
+                git checkout 分支名字
+            合并分支
+                git merge 分支名字
+                :wq 保存并推出
+            删除 login 分支
+                git branch -d 分支名字
+            
+
+            分支的远程操作
+                1 切换到要上传内容的分支
+                2 git push origin 分支名称
+            删除远程分支
+                1 git push origin --delete 分支名称
+
+
+            分支命名规范
+                主分支
+                    master 
+                    不接收任何代码上传
+                    只接收合并的内容
+                    只存储每一个迭代版本中经过测试合格的版本
+                主开发分支 dev
+                    不接收任何代码上传
+                    只接收 主功能分支 合并的内容
+                    存储在开发过程中的每一个阶段内容
+                主功能分支 feature-****
+                    进行各个功能的开发
+                    开发完毕 以后把代码合并到dev分支上
+                    接收文件上传
+                功能bug 解决分支 feature-***-fix-***
+                    在功能分支上开辟出来的
+                    在项目运行过程中 出现bug进行修复的分支
+                紧急bug解决 hot-fix-***
+                    直接从master 上开辟
+                    进行紧急的bug修复
+                    修复完毕以后 直接合并到master 上
+
+
+            密钥
+                ssh-keygen -t rsa -C "邮箱名"
+                直接三个回车
+            找到目录文件中 pub 文件  复制内容 
+            右上角 用户 settings --- ssh ---ssh key
+            ---new ssh key
+
+        github 桌面端
+        
         */
     </script>
 </body>
